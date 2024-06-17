@@ -1,0 +1,205 @@
+{
+  "version": 2,
+  "dgSpecHash": "xc+vfFnglgk4BtOYfBZWLeRCxFLb7G8tmhwcNJISv+XU3eCiF99ws2wJAC0uEF2wWbd464WCNGS7xT7xr3IG1g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Syv\\RiderProjects\\MewdekoManager\\MewdekoManager.Desktop\\MewdekoManager.Desktop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Syv\\.nuget\\packages\\avalonia\\0.4.0\\avalonia.0.4.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\avalonia.controls.datagrid\\0.10.0\\avalonia.controls.datagrid.0.10.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\avalonia.desktop\\0.4.0\\avalonia.desktop.0.4.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\avalonia.diagnostics\\0.10.0\\avalonia.diagnostics.0.10.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\avalonia.fonts.inter\\11.0.0\\avalonia.fonts.inter.11.0.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\avalonia.remote.protocol\\0.10.0\\avalonia.remote.protocol.0.10.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\avalonia.themes.fluent\\11.0.0\\avalonia.themes.fluent.11.0.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0\\communitytoolkit.mvvm.8.2.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\jetbrains.annotations\\10.3.0\\jetbrains.annotations.10.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.9.6\\microsoft.codeanalysis.analyzers.2.9.6.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\microsoft.codeanalysis.common\\3.4.0\\microsoft.codeanalysis.common.3.4.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\microsoft.codeanalysis.csharp\\3.4.0\\microsoft.codeanalysis.csharp.3.4.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\3.4.0\\microsoft.codeanalysis.csharp.scripting.3.4.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\3.4.0\\microsoft.codeanalysis.scripting.common.3.4.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\serilog\\1.5.14\\serilog.1.5.14.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\sharpdx\\3.0.2\\sharpdx.3.0.2.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\sharpdx.direct2d1\\3.0.2\\sharpdx.direct2d1.3.0.2.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\sharpdx.dxgi\\3.0.2\\sharpdx.dxgi.3.0.2.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\splat\\1.6.2\\splat.1.6.2.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\sprache\\2.0.0.50\\sprache.2.0.0.50.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.collections.concurrent\\4.0.12\\system.collections.concurrent.4.0.12.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.diagnostics.tools\\4.0.1\\system.diagnostics.tools.4.0.1.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.diagnostics.tracing\\4.1.0\\system.diagnostics.tracing.4.1.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.dynamic.runtime\\4.3.0\\system.dynamic.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reactive.core\\3.0.0\\system.reactive.core.3.0.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reactive.interfaces\\3.0.0\\system.reactive.interfaces.3.0.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reactive.linq\\3.0.0\\system.reactive.linq.3.0.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reactive.platformservices\\3.0.0\\system.reactive.platformservices.3.0.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.0.1\\system.runtime.interopservices.windowsruntime.4.0.1.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.threading.thread\\4.0.0\\system.threading.thread.4.0.0.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.threading.threadpool\\4.0.10\\system.threading.threadpool.4.0.10.nupkg.sha512",
+    "C:\\Users\\Syv\\.nuget\\packages\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency Avalonia.Desktop does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "Avalonia.Desktop",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v8.0"
+      ]
+    },
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "MewdekoManager does not provide an inclusive lower bound for dependency Avalonia. An approximate best match of Avalonia 0.4.0 was resolved.",
+      "libraryId": "Avalonia",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "MewdekoManager does not provide an inclusive lower bound for dependency Avalonia.Diagnostics. An approximate best match of Avalonia.Diagnostics 0.10.0 was resolved.",
+      "libraryId": "Avalonia.Diagnostics",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "MewdekoManager does not provide an inclusive lower bound for dependency Avalonia.Fonts.Inter. An approximate best match of Avalonia.Fonts.Inter 11.0.0 was resolved.",
+      "libraryId": "Avalonia.Fonts.Inter",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "MewdekoManager does not provide an inclusive lower bound for dependency Avalonia.Themes.Fluent. An approximate best match of Avalonia.Themes.Fluent 11.0.0 was resolved.",
+      "libraryId": "Avalonia.Themes.Fluent",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Avalonia 0.4.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Avalonia",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Avalonia.Desktop 0.4.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Avalonia.Desktop",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Serilog 1.5.14' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Serilog",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SharpDX 3.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SharpDX",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SharpDX.Direct2D1 3.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SharpDX.Direct2D1",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SharpDX.DXGI 3.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SharpDX.DXGI",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Splat 1.6.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Splat",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Sprache 2.0.0.50' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Sprache",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}
