@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="MewdekoManager/Views/MainView.axaml" value="MewdekoManager.Desktop/MewdekoManager.Desktop.csproj" />
+        <entry key="MewdekoManager/Views/MainWindow.axaml" value="MewdekoManager.Desktop/MewdekoManager.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

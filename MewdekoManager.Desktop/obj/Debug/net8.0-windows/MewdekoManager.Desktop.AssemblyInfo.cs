@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MewdekoManager.Desktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+142da369f296d448355984a907e17d23642e6e95")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec36c95394a97dd2678ccebadefc9dfd4a9cba06")]
 [assembly: System.Reflection.AssemblyProductAttribute("MewdekoManager.Desktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MewdekoManager.Desktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

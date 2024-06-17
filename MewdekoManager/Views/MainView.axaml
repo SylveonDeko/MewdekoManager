@@ -4,100 +4,62 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MewdekoManager.Views.MainView">
-	<UserControl.Styles>
-		<Style Selector="TabControl">
-			<Setter Property="TabStripPlacement" Value="Top"/>
-			<Setter Property="Background" Value="#333333"/>
-			<Setter Property="Padding" Value="5"/>
-		</Style>
-		<Style Selector="TabItem">
-			<Setter Property="Width" Value="100"/>
-			<Setter Property="Height" Value="30"/>
-			<Setter Property="Background" Value="#555555"/>
-			<Setter Property="Foreground" Value="White"/>
-			<Setter Property="BorderBrush" Value="Transparent"/>
-			<Setter Property="BorderThickness" Value="0"/>
-			<Setter Property="Padding" Value="0"/>
-			<Setter Property="FontWeight" Value="Bold"/>
-			<Setter Property="FontSize" Value="12"/>
-			<Setter Property="HorizontalContentAlignment" Value="Center"/>
-			<Setter Property="VerticalContentAlignment" Value="Center"/>
-			<Setter Property="Margin" Value="5,0,5,0"/>
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate>
-						<Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="10,10,0,0">
-							<ContentPresenter Content="{TemplateBinding Header}"
-                                              HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"
-                                              Foreground="{TemplateBinding Foreground}"/>
-						</Border>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-		<Style Selector="TabItem:focus, TabItem:hover">
-			<Setter Property="Background" Value="#666666"/>
-		</Style>
-		<Style Selector="TabItem:selected">
-			<Setter Property="Background" Value="#333333"/>
-		</Style>
-		<Style Selector="Image.rounded">
-			<Setter Property="Clip">
-				<Setter.Value>
-					<EllipseGeometry Center="40,40" RadiusX="40" RadiusY="40"/>
-				</Setter.Value>
-			</Setter>
-		</Style>
-		<Style Selector="Image.glow:focus, Image.glow:hover">
-			<Setter Property="Effect">
-				<Setter.Value>
-					<DropShadowEffect Color="Cyan" Opacity="0.8" BlurRadius="10"/>
-				</Setter.Value>
-			</Setter>
-		</Style>
-		<Style Selector="Image.selected-glow">
-			<Setter Property="Effect">
-				<Setter.Value>
-					<DropShadowEffect Color="Cyan" Opacity="1.0" BlurRadius="15"/>
-				</Setter.Value>
-			</Setter>
-		</Style>
-	</UserControl.Styles>
-	<Grid>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="100" />
-			<ColumnDefinition Width="*" />
-		</Grid.ColumnDefinitions>
-		<ScrollViewer Grid.Column="0" Background="#2A2A2A" VerticalScrollBarVisibility="Auto">
-			<StackPanel x:Name="ImageStackPanel" Orientation="Vertical">
-				<!-- Images will be added here dynamically -->
-			</StackPanel>
-		</ScrollViewer>
-		<TabControl Grid.Column="1">
-			<TabItem Header="Status">
-				<Grid Background="#333333">
-					<TextBlock x:Name="StatusTextBlock" Foreground="White" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-				</Grid>
-			</TabItem>
-			<TabItem Header="Credentials">
-				<Grid Background="#333333">
-					<TextBlock x:Name="CredentialsTextBlock" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-				</Grid>
-			</TabItem>
-			<TabItem Header="Music">
-				<Grid Background="#333333">
-					<TextBlock x:Name="MusicTextBlock" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-				</Grid>
-			</TabItem>
-			<TabItem Header="Config">
-				<Grid Background="#333333">
-					<TextBlock x:Name="ConfigTextBlock" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-				</Grid>
-			</TabItem>
-		</TabControl>
-	</Grid>
+    <UserControl.Styles>
+        <!-- Styles omitted for brevity -->
+    </UserControl.Styles>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer Grid.Column="0" Background="#2A2A2A" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="ImageStackPanel" Orientation="Vertical">
+                <!-- Images will be added here dynamically -->
+            </StackPanel>
+        </ScrollViewer>
+
+        <TabControl Grid.Column="1">
+            <TabItem Header="Status">
+                <Grid Background="#333333">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid>
+                        <Image x:Name="BotBannerImage" Stretch="UniformToFill" Opacity="0.5" Grid.Row="0">
+                            <Image.Effect>
+                                <BlurEffect Radius="10"/>
+                            </Image.Effect>
+                        </Image>
+                        <TextBlock x:Name="BotNameTextBlock" Foreground="White" FontSize="36" FontWeight="Bold"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Grid.Row="0"/>
+                    </Grid>
+                    
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+                        <TextBlock x:Name="BotPingTextBlock" Foreground="White" FontSize="14"/>
+                        <TextBlock x:Name="BotOnlineStatusTextBlock" Foreground="White" FontSize="14"/>
+                        <TextBlock x:Name="BotServerCountTextBlock" Foreground="White" FontSize="14"/>
+                        <TextBlock x:Name="BotHighestMemberServerTextBlock" Foreground="White" FontSize="14"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Credentials">
+                <Grid Background="#333333">
+                    <TextBlock x:Name="CredentialsTextBlock" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Music">
+                <Grid Background="#333333">
+                    <TextBlock x:Name="MusicTextBlock" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Config">
+                <Grid Background="#333333">
+                    <TextBlock x:Name="ConfigTextBlock" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
 </UserControl>
