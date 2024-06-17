@@ -25,30 +25,30 @@ jobs:
 
       - name: Zip artifacts
         run: |
-          Remove-Item -Path output\*.pdb -Force
-          Compress-Archive -Path output\* -DestinationPath MewdekoManager-win64.zip
+          find output -name "*.pdb" -delete
+          zip -r MewdekoManager-win64.zip output
 
       - name: Get current date
         id: get_date
-        run: echo "date=$(Get-Date -Format 'yyyy-MM-dd')" >> $GITHUB_ENV
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
       - name: Get previous tag
         id: prev_tag
         run: |
-          if (git describe --tags --abbrev=0) {
+          if git describe --tags --abbrev=0 > /dev/null 2>&1; then
             echo "prev_tag=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
-          } else {
+          else
             echo "prev_tag=initial" >> $GITHUB_ENV
-          }
+          fi
 
       - name: Get commit messages
         id: commit_messages
         run: |
-          if ($env:prev_tag -ne "initial") {
-            echo "messages=$(git log --pretty=format:'* %s' $env:prev_tag..HEAD)" >> $GITHUB_ENV
-          } else {
+          if [ "${{ env.prev_tag }}" != "initial" ]; then
+            echo "messages=$(git log --pretty=format:'* %s' ${{ env.prev_tag }}..HEAD)" >> $GITHUB_ENV
+          else
             echo "messages=$(git log --pretty=format:'* %s')" >> $GITHUB_ENV
-          }
+          fi
 
       - name: Create Release
         id: create_release
