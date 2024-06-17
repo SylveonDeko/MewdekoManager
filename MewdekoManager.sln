@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MewdekoManager", "MewdekoManager.csproj", "{C5EB555D-6282-49A5-9F73-8D0AF8248A08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MewdekoManager", "MewdekoManager\MewdekoManager.csproj", "{C5EB555D-6282-49A5-9F73-8D0AF8248A08}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MewdekoManager.Desktop", "..\MewdekoManager.Desktop\MewdekoManager.Desktop.csproj", "{CB8F3DA3-2D53-4D5D-A83A-45469C7E8EDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MewdekoManager.Desktop", "MewdekoManager.Desktop\MewdekoManager.Desktop.csproj", "{CB8F3DA3-2D53-4D5D-A83A-45469C7E8EDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

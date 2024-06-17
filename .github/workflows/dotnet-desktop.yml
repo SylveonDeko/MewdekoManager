@@ -3,65 +3,65 @@ name: Build and Release MewdekoManager
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: '8.0.x'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore MewdekoManager.Desktop/MewdekoManager.Desktop.csproj
+      - name: Restore dependencies
+        run: dotnet restore MewdekoManager.Desktop/MewdekoManager.Desktop.csproj
 
-    - name: Build
-      run: dotnet publish MewdekoManager.Desktop/MewdekoManager.Desktop.csproj --no-restore -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=false -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true -o output/
+      - name: Build
+        run: dotnet publish MewdekoManager.Desktop/MewdekoManager.Desktop.csproj --no-restore -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=false -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true -o output/
 
-    - name: Zip artifacts
-      run: |
-        cd output
-        find . -name "*.pdb" -delete
-        zip -r ../MewdekoManager-win64.zip .
+      - name: Zip artifacts
+        run: |
+          cd output
+          find . -name "*.pdb" -delete
+          zip -r ../MewdekoManager-win64.zip .
 
-    - name: Get current date
-      id: get_date
-      run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - name: Get current date
+        id: get_date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-    - name: Get previous tag
-      id: prev_tag
-      run: echo "prev_tag=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+      - name: Get previous tag
+        id: prev_tag
+        run: echo "prev_tag=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
 
-    - name: Get commit messages
-      id: commit_messages
-      run: echo "messages=$(git log --pretty=format:'* %s' ${{ env.prev_tag }}..HEAD)" >> $GITHUB_ENV
+      - name: Get commit messages
+        id: commit_messages
+        run: echo "messages=$(git log --pretty=format:'* %s' ${{ env.prev_tag }}..HEAD)" >> $GITHUB_ENV
 
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: beta-${{ github.run_number }}
-        release_name: Beta Release ${{ github.run_number }} (${{ env.date }})
-        body: |
-          Automated build for commit ${{ github.sha }}
-          ## Commits since previous release:
-          - ${{ env.messages }}
-        draft: false
-        prerelease: true
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: beta-${{ github.run_number }}
+          release_name: Beta Release ${{ github.run_number }} (${{ env.date }})
+          body: |
+            Automated build for commit ${{ github.sha }}
+            ## Commits since previous release:
+            - ${{ env.messages }}
+          draft: false
+          prerelease: true
 
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./MewdekoManager-win64.zip
-        asset_name: MewdekoManager-win64.zip
-        asset_content_type: application/zip
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./MewdekoManager-win64.zip
+          asset_name: MewdekoManager-win64.zip
+          asset_content_type: application/zip
