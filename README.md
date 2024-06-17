@@ -1,5 +1,3 @@
----
-
 # Mewdeko Manager
 
 ![Mewdeko Manager Screenshot](render.png)
@@ -32,5 +30,4 @@ Licensed under AGPLv3. See the [LICENSE](LICENSE) file for details.
 ## Stay in Touch
 
 Join our community on [Discord](https://discord.gg/deko).
-
----
+___
