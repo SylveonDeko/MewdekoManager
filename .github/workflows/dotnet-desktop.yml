@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v2
@@ -35,20 +35,20 @@ jobs:
       - name: Get previous tag
         id: prev_tag
         run: |
-          if git describe --tags --abbrev=0 > /dev/null 2>&1; then
+          if (git describe --tags --abbrev=0) {
             echo "prev_tag=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
-          else
+          } else {
             echo "prev_tag=initial" >> $GITHUB_ENV
-          fi
+          }
 
       - name: Get commit messages
         id: commit_messages
         run: |
-          if [ "${{ env.prev_tag }}" != "initial" ]; then
-            echo "messages=$(git log --pretty=format:'* %s' ${{ env.prev_tag }}..HEAD)" >> $GITHUB_ENV
-          else
+          if ($env:prev_tag -ne "initial") {
+            echo "messages=$(git log --pretty=format:'* %s' $env:prev_tag..HEAD)" >> $GITHUB_ENV
+          } else {
             echo "messages=$(git log --pretty=format:'* %s')" >> $GITHUB_ENV
-          fi
+          }
 
       - name: Create Release
         id: create_release
