@@ -10,66 +10,58 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v2
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '8'
+        dotnet-version: '8.0.x'
 
     - name: Restore dependencies
       run: dotnet restore MewdekoManager.Desktop/MewdekoManager.Desktop.csproj
 
     - name: Build
-      run: dotnet build MewdekoManager.Desktop/MewdekoManager.Desktop.csproj --configuration Release
+      run: dotnet publish MewdekoManager.Desktop/MewdekoManager.Desktop.csproj --no-restore -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=false -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true -o output/
 
-    - name: Publish
-      run: dotnet publish MewdekoManager.Desktop/MewdekoManager.Desktop.csproj --configuration Release --output publish
+    - name: Zip artifacts
+      run: |
+        cd output
+        find . -name "*.pdb" -delete
+        zip -r ../MewdekoManager-win64.zip .
 
-    - name: Create release directory
-      run: mkdir release
+    - name: Get current date
+      id: get_date
+      run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-    - name: Copy executable to release directory
-      run: copy publish\MewdekoManager.Desktop.exe release\MewdekoManager.exe
+    - name: Get previous tag
+      id: prev_tag
+      run: echo "prev_tag=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
 
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: MewdekoManager
-        path: release
+    - name: Get commit messages
+      id: commit_messages
+      run: echo "messages=$(git log --pretty=format:'* %s' ${{ env.prev_tag }}..HEAD)" >> $GITHUB_ENV
 
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Download artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: MewdekoManager
-
-    - name: Create GitHub Release
+    - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: 'beta-${{ github.run_id }}'
-        release_name: 'Beta Release ${{ github.run_id }}'
+        tag_name: beta-${{ github.run_number }}
+        release_name: Beta Release ${{ github.run_number }} (${{ env.date }})
+        body: |
+          Automated build for commit ${{ github.sha }}
+          ## Commits since previous release:
+          - ${{ env.messages }}
         draft: false
         prerelease: true
 
-    - name: Upload to GitHub Release
+    - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: release/MewdekoManager.Desktop.exe
-        asset_name: MewdekoManager.Desktop.exe
-        asset_content_type: application/octet-stream
+        asset_path: ./MewdekoManager-win64.zip
+        asset_name: MewdekoManager-win64.zip
+        asset_content_type: application/zip
