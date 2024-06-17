@@ -1,0 +1,75 @@
+name: Build and Release MewdekoManager
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8'
+
+    - name: Restore dependencies
+      run: dotnet restore MewdekoManager.Desktop/MewdekoManager.Desktop.csproj
+
+    - name: Build
+      run: dotnet build MewdekoManager.Desktop/MewdekoManager.Desktop.csproj --configuration Release
+
+    - name: Publish
+      run: dotnet publish MewdekoManager.Desktop/MewdekoManager.Desktop.csproj --configuration Release --output publish
+
+    - name: Create release directory
+      run: mkdir release
+
+    - name: Copy executable to release directory
+      run: copy publish\MewdekoManager.Desktop.exe release\MewdekoManager.exe
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: MewdekoManager
+        path: release
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Download artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: MewdekoManager
+
+    - name: Create GitHub Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: 'beta-${{ github.run_id }}'
+        release_name: 'Beta Release ${{ github.run_id }}'
+        draft: false
+        prerelease: true
+
+    - name: Upload to GitHub Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: release/MewdekoManager.Desktop.exe
+        asset_name: MewdekoManager.Desktop.exe
+        asset_content_type: application/octet-stream
